@@ -1,0 +1,136 @@
+<!--{% load static %}-->
+
+<!--<! DOCTYPE html>-->
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>SPATIAL PLOT</title>
+<!--        Success-->
+        <br>
+
+        <body style="margin-center: 30px;background-color:lightblue;">
+<!--            <p>-->
+<!--&lt;!&ndash;                <form action="{% url 'fileupload:success' %}" method="get" enctype="multipart/form-data">&ndash;&gt;-->
+<!--&lt;!&ndash;                </form>&ndash;&gt;-->
+<!--                File Uploaded Successfully-->
+<!--                <img src="{%static 'Harish.png'%}" alt="centered image">-->
+<!--            </p>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+            <p>
+                <form action="{% url 'fileupload:success' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p>
+<!--                        .center {-->
+<!--                            display: block;-->
+<!--                            margin-left: auto;-->
+<!--                            margin-right: auto;-->
+<!--                            width: 50%;-->
+<!--                            }-->
+<!--                        File Uploaded Successfully-->
+<!--                        <centre>-->
+<!--                            <figcaption style="font-family:calibri;"><b><u>Dataset1-Area Plot :</u></b></figcaption>-->
+<!--                            <img src="{%static 'ShapePlot.png'%}" alt="Shape Plot" width="800" height="600"-->
+<!--                             style="border:5px solid black;display:block;margin-left:auto;margin-right:auto;">-->
+<!--                            <br></br>-->
+
+<!--                            <figcaption style="font-family:calibri;"><b><u>Dataset2-Area Plot :</u></b></figcaption>-->
+<!--                            <img src="{%static 'ShapePlot1.png'%}" alt="Shape Plot" width="800" height="600"-->
+<!--                             style="border:5px solid black;display:block;margin-left:auto;margin-right:auto">-->
+<!--                            <br></br>-->
+                            <figcaption style="font-family:calibri;"><b><u>Base-Test-Area Plot :</u></b></figcaption>
+                            <p></p>
+                            <label style="font-family:calibri;color:red"><b>Blue Point: Base Data Point<p></p> Red Point: Test Data Point</b></label>
+                            <img src="{%static 'ShapePlot2.png'%}" alt="Shape Plot2" width="800" height="600"
+                             style="border:5px solid black;display:block;margin-left:auto;margin-right:auto">
+                            <br></br>
+                            <figcaption style="font-family:calibri;"><b><u>Area Plot :</u></b></figcaption><p></p>
+                            <label style="font-family:calibri;color:red;"><b>White Region: pVal > 0.05 </b></label><p></p>
+                            <label style="font-family:calibri;color:red"><b>Blue Region: (Base Data Points > Dataset2 Points) and pVal <= 0.05</b></label><p></p>
+                            <label style="font-family:calibri;color:red"><b>Red Region: (Base Data Points < Dataset2 Points) and pVal <= 0.05</b></label><p></p>
+                            <img src="{%static 'shapeAreas.png'%}" alt="Shape Plot" width="800" height="600"
+                             style="border:5px solid black;display:block;margin-left:auto;margin-right:auto">
+                            <br></br>
+<!--    width="600" height="450"-->
+<!--                        </centre>-->
+<!--    display:block;margin-left:auto;margin-right:auto-->
+                    </p>
+                    <p></p>
+<!--                    <p>shp1: {{shape_files1 }}</p>-->
+                    <input type="hidden" id="shapefile1" name="shapefile1" value={{shape_files1 }}>
+                    <input type="hidden" id="shapefile2" name="shapefile2" value={{shape_files2 }}>
+                    <input type="hidden" id="shapefile3" name="shapefile3" value={{shape_files3 }}>
+                    <input type="hidden" id="pValue" name="pValue" value={{pValueDictionary }}>
+
+<!--                    <p>shp2: {{shape_files2 }}</p>-->
+<!--                    <p>shp3: {{shape_files3}}</p>-->
+<!--                    <br></br>-->
+                    <p></p>
+                        <p></p>
+                        <label style="font-family:calibri" for="globalD"><b>globalD :</b></label>
+                        <input type="number" id="globalD" name="globalD" value={{globalD}} style="border: 1px solid black; padding: 5px;">
+                        <p></p>
+
+                        <p></p>
+                        <label style="font-family:calibri" for="inverseGlobalD"><b>globalS :</b></label>
+                        <input type="number" id="inverseGlobalD" name="inverseGlobalD" value={{inverseGlobalD}} style="border: 1px solid black; padding: 5px;">
+                        <p></p>
+
+<!--                    <label for="Output Data"><b>Output Data :</b></label>-->
+<!--                    <input type="text"-->
+<!--                    title="Upload name"-->
+<!--                    name="Output Data"-->
+<!--                    style="border: 1px solid black; padding: 5px;"-->
+<!--                    required="required"-->
+<!--                    multiple class="form-control"-->
+<!--                    id="Output Data" />    &lt;!&ndash;placeholder="name"&ndash;&gt;-->
+
+                    <p></p>
+<!--                    <p>-->
+<!--                        <label for="Montecarlo Runs"><b>Montecarlo Runs :</b></label>-->
+<!--                        <input type="number" id="Montecarlo Runs" name="Montecarlo Runs" style="border: 1px solid black; padding: 5px;" >  &lt;!&ndash;required="required"&ndash;&gt;-->
+<!--                    </p>-->
+
+
+                    <p></p>
+<!--                    <input type="submit"-->
+<!--                        value="Reload"-->
+<!--                        style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;" />-->
+                </form>
+            </p>
+        </body>
+    </head>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--{% load static %}-->
+
+<!--<! DOCTYPE html>-->
+<!--<html xmlns="http://www.w3.org/1999/html">-->
+<!--    <head>-->
+<!--        <title>Success</title>-->
+<!--        <body>-->
+<!--            <p>-->
+<!--                File Uploaded Successfully-->
+<!--                <img src="{%static 'Harish.png'%}" alt="centered image">-->
+<!--            </p>-->
+<!--            <p></p>-->
+<!--            <input type="submit"-->
+<!--                   value="Run"-->
+<!--                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;" />-->
+
+<!--        </body>-->
+<!--    </head>-->
+<!--</html>-->
+
+
+
+

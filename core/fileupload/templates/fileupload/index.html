@@ -1,0 +1,331 @@
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>
+            SPATIAL TEST
+        </title>
+    </head>
+    <body style="margin-top: 30px;margin-center: 30px;background-color:lightblue;">
+<!--    background-color: grey;-->
+<!--        <label for="myfile">Select a file:</label>-->
+<!--        <input type="file" id="myfile" name="myfile">-->
+            <p></p>
+<p></p>
+<!--        <h2 style="font-family:calibri;color:black"><b><u>KURLAND SPATIAL TEST</u></b></h2>-->
+
+<!--        <br>-->
+        <form action="{% url 'fileupload:index' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+<!--            <label for="fileInput1"><b>AREA FILE:</b></label>-->
+            <h3 style="font-family:calibri;"><b><u>FILES :</u></b></h3>
+            <p></p>
+<!--            <label for="fileInput3"><b>DATASET 2:</b></label>-->
+            <label style="font-family:calibri;" for="fileInput3"><b>Area Data:    </b></label>
+            <input type="file"
+                   title="Browse Area Data"
+                   name="shape_file3"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required"
+                   multiple class="form-control"
+                   id="fileInput3" placeholder="Shapefiles" />  <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>
+            <p></p>
+            <label style="font-family:calibri;" for="fileInput1"><b>Base Data:    </b></label>
+<!--color:blue-->
+            <input type="file"
+                   title="Browse Base Data"
+                   name="shape_file1"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required"
+                   multiple class="form-control"
+                   id="fileInput1" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>
+            <p></p>
+            <p></p>
+<!--            <label for="fileInput2"><b>DATASET 1:</b></label>-->
+            <label style="font-family:calibri;" for="fileInput2"><b>Test Data:    </b></label>
+            <input type="file"
+                   title="Browse Test Data"
+                   name="shape_file2"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required"
+                   multiple class="form-control"
+                   id="fileInput2" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>
+            <p></p>
+
+
+            <label style="font-family:calibri;" for="fileInput4"><b>OutputData:    </b></label>
+            <input type="file"
+                   title="Browse Output Data"
+                   name="shape_file4"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required"
+                   multiple class="form-control"
+                   id="fileInput4" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>
+            <p></p>
+
+<!--            <label style="font-family:calibri;" for="OutputData"><b>Output Data :</b></label>-->
+<!--            <input type="text" id="OutputData" name="OutputData" style="border: 1px solid black; padding: 5px;" >-->
+
+
+
+
+
+
+
+<!--            adding extra feature of 10 files code starts-->
+<!--            <label style="font-family:calibri;" for="fileInput4"><b>Test Data 2:    </b></label>-->
+<!--&lt;!&ndash;color:blue&ndash;&gt;-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 2"-->
+<!--                   name="shape_file4"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput4" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput5"><b>Test Data 3:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 3"-->
+<!--                   name="shape_file5"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput5" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput6"><b>Test Data 4:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 4"-->
+<!--                   name="shape_file6"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput6" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput7"><b>Test Data 5:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 5"-->
+<!--                   name="shape_file7"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput7" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput8"><b>Test Data 6:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 6"-->
+<!--                   name="shape_file8"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput8" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+
+
+
+
+
+
+
+<!--            <label style="font-family:calibri;" for="fileInput9"><b>Test Data 7:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 7"-->
+<!--                   name="shape_file9"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput9" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput10"><b>Test Data 8:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 8"-->
+<!--                   name="shape_file10"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput10" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput11"><b>Test Data 9:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 9"-->
+<!--                   name="shape_file11"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput11" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+<!--            <label style="font-family:calibri;" for="fileInput12"><b>Test Data 10:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Test Data 10"-->
+<!--                   name="shape_file12"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput12" placeholder="Shapefiles"/> <label style="font-family:calibri;color:red;"><b>Input file with .shp extension</b></label>-->
+<!--            <p></p>-->
+<!--            <p></p>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--            adding extra feature of 10 files code ends-->
+<!--            <p></p>-->
+<!--&lt;!&ndash;            <label for="fileInput3"><b>DATASET 2:</b></label>&ndash;&gt;-->
+<!--            <label style="font-family:calibri;" for="fileInput1"><b>Area Data:    </b></label>-->
+<!--            <input type="file"-->
+<!--                   title="Browse Area Data"-->
+<!--                   name="shape_file3"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   required="required"-->
+<!--                   multiple class="form-control"-->
+<!--                   id="fileInput3" placeholder="Shapefiles" />-->
+<!--            <p></p>-->
+            <p></p>
+            <br></br>
+
+<!--            <label for="fileInput1"><b>Output Data:</b></label>-->
+<!--            Model Parameters &#45;&#45; heading-->
+<!--            Number of Iterations  &#45;&#45; input field-->
+<!--            Sample Size(%)  &#45;&#45; input field-->
+<!--            Confidence Interval(%)  &#45;&#45; input field-->
+<!--            Run Model  &#45;&#45;  heading-->
+<!--            Run &#45;&#45; button-->
+
+
+<!--            code for out put file and montecarlo runs  -->
+<!--            <p><label for="Output Data"><b>Output Data :</b></label>-->
+<!--                    <input type="text"-->
+<!--                    title="Upload name"-->
+<!--                    name="Output Data"-->
+<!--                    style="border: 1px solid black; padding: 5px;"-->
+<!--                    required="required"-->
+<!--                    multiple class="form-control"-->
+<!--                    id="Output Data" />-->
+<!--            </p>-->
+            <h3 style="font-family:calibri;"><b><u>Model Parameters :</u></b></h3>
+<!--            style="font-size:60px;"-->
+            <p>
+                        <label style="font-family:calibri;" for="Montecarlo Runs"><b>Montecarlo Runs :</b></label>
+                        <input type="number" id="Montecarlo Runs" name="Montecarlo Runs" style="border: 1px solid black; padding: 5px;" >    <!--required="required"-->
+            </p>
+
+            <p>
+                        <label style="font-family:calibri;" for="p-value threshold"><b>p-value threshold :</b></label>
+<!--                        <input type="number" id="p-value threshold" name="p-value threshold" style="border: 1px solid black; padding: 5px;" step="any">    &lt;!&ndash;required="required"&ndash;&gt;-->
+                        <input type="number" id="p-value threshold" name="p-value threshold" step="0.01" min="0" max="10" style="border: 1px solid black; padding: 5px;">
+            </p>
+
+            <br></br>
+            <h3 style="font-family:calibri;"><b><u>Run Model :</u></b></h3>
+            <input type="submit"
+                   value="Run"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;" />
+
+        </form>
+        <p></p>
+<!--        <hr>-->
+
+<!--        {% for row in excel_data %}-->
+<!--            {% for cell in row %}-->
+<!--                {{ cell }}&nbsp;&nbsp;-->
+<!--            {% endfor %}-->
+<!--            <br>-->
+<!--        {% endfor %}-->
+    </body>
+</html>
+
+
+
+
+<!--HARISH-->
+
+
+<!--<html>-->
+<!--    <head>-->
+<!--        <title>-->
+<!--            Excel file upload and processing : Django Example : ThePythonDjango.Com-->
+<!--        </title>-->
+<!--    </head>-->
+<!--    <body style="margin-top: 30px;margin-left: 30px;">-->
+<!--        <form action="{% url "fileupload:index" %}" method="post" enctype="multipart/form-data">-->
+<!--                {% csrf_token %}-->
+<!--            <input type="file"-->
+<!--                   title="Upload shape file"-->
+<!--                   id="id_docfile"-->
+<!--                   name="shape_file1"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   required="required">-->
+<!--        &lt;!&ndash; <input name="exampleShapefiles" type="file" multiple class="form-control" id="fileInput" placeholder="Shapefiles">&ndash;&gt;-->
+<!--        <p>-->
+<!--&lt;!&ndash;        <input type="file"&ndash;&gt;-->
+<!--&lt;!&ndash;                   title="Upload shape file2"&ndash;&gt;-->
+<!--&lt;!&ndash;                   name="shape_file2"&ndash;&gt;-->
+<!--&lt;!&ndash;                   style="border: 1px solid black; padding: 5px;"&ndash;&gt;-->
+<!--&lt;!&ndash;                   required="required">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="file"&ndash;&gt;-->
+<!--&lt;!&ndash;                   title="Upload shape file3"&ndash;&gt;-->
+<!--&lt;!&ndash;                   name="shape_file3"&ndash;&gt;-->
+<!--&lt;!&ndash;                   style="border: 1px solid black; padding: 5px;"&ndash;&gt;-->
+<!--&lt;!&ndash;                   required="required">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>&ndash;&gt;-->
+<!--           &lt;!&ndash; <input type="file"-->
+<!--                   title="Upload shape file"-->
+<!--                   name="shape_file2"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   required="required">-->
+<!--        <p></p>-->
+<!--            <input type="file"-->
+<!--                   title="Upload shape file"-->
+<!--                   name="area_file1"-->
+<!--                   style="border: 1px solid black; padding: 5px;"-->
+<!--                   required="required">-->
+<!--        <p></p>&ndash;&gt;-->
+<!--            <input type="submit"-->
+<!--                   value="Upload"-->
+<!--                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">-->
+<!--        </p>-->
+
+<!--        <p></p>-->
+<!--        <hr>-->
+
+<!--        {{shape_file4}}&nbsp;&nbsp;-->
+
+<!--&lt;!&ndash;        {% for row in excel_data %}&ndash;&gt;-->
+<!--&lt;!&ndash;            {% for cell in row %}&ndash;&gt;-->
+<!--&lt;!&ndash;                {{ cell }}&nbsp;&nbsp;&ndash;&gt;-->
+<!--&lt;!&ndash;            {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endfor %}&ndash;&gt;-->
+<!--    </body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;        code to upload shape file starts&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;{% block app_content %}&ndash;&gt;-->
+<!--&lt;!&ndash;  <h1>Upload a Shapefile</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;  <form action="" method="post" enctype="multipart/form-data">.&ndash;&gt;-->
+<!--&lt;!&ndash;    {% csrf_token %}&ndash;&gt;-->
+<!--    <div class="form-group">-->
+<!--        <label for="fileInput">Shapefiles</label>-->
+<!--        <input name="exampleShapefiles" type="file" multiple class="form-control" id="fileInput" placeholder="Shapefiles">-->
+<!--    </div>-->
+<!--    <input name="submit" type="submit" class="btn btn-default">-->
+<!--&lt;!&ndash;  </form>&ndash;&gt;-->
+<!--{% endblock %}-->
+<!--        <p>-->
+
+<!--&lt;!&ndash;        code to upload shape file ends&ndash;&gt;-->
