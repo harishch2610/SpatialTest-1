@@ -19,7 +19,7 @@ dbf==0.98.3
 dbfread==2.0.7
 decorator==4.4.2
 descartes==1.1.0
-Django==3.0.3
+Django==3.0.7
 django-six==1.0.4
 django-utils==0.0.2
 entrypoints==0.3
